@@ -1,0 +1,14 @@
+<h1>Novo Artigo</h1>
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+  <p>
+    <%= form.label :title, 'Título' %><br>
+    <%= form.text_field :text %>
+  </p>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text, placeholder: "Escreva seu Artigo" %>
+  </p>
+  <p>
+    <%= form.submit 'Enviar' %>
+  </p>
+<% end %>
